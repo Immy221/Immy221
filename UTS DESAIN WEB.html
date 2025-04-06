@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gwehbanget</title>
+  <!-- Import Google Font Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --gold: #dda853;    
+      --blue: #27548a;         
+      --dark-blue: #183b4e;    
+      --cream: #f5eedc;        
+      --text-dark: #333;
+      --text-light: #fff;
+      --font-family: 'Montserrat', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: var(--font-family);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--cream);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    /* HEADER / NAVBAR */
+    header {
+      width: 100%;
+      background-color: var(--gold);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .logo h1 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 400;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: var(--blue);
+    }
+
+    /* HERO SECTION */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 3rem 1rem;
+      background-color: var(--cream);
+    }
+
+    .hero-img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid var(--blue);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      max-width: 700px;
+      margin: 0 auto 1rem;
+    }
+
+    /* TENTANG SECTION */
+.about-section {
+  padding: 3rem 1rem;
+  /* Background gradasi sebagai contoh, bisa diganti dengan background-color atau background-image */
+  background: linear-gradient(135deg, var(--cream), var(--gold));
+  text-align: center;
+  color: var(--text-dark); /* pastikan kontras dengan background */
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.about-text {
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
+    /* GALERI SECTION */
+    .gallery-section {
+      padding: 3rem 1rem;
+      background-color: var(--blue);
+    }
+
+    .gallery-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      color: var(--text-light);
+    }
+
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .gallery-container img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .gallery-container img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    .view-more-btn {
+      display: block;
+      width: max-content;
+      margin: 2rem auto 0;
+      padding: 0.8rem 1.5rem;
+      background-color: var(--gold);
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    .view-more-btn:hover {
+      background-color: var(--dark-blue);
+      color: var(--text-light);
+    }
+
+    /* KONTAK SECTION */
+    .contact-section {
+      padding: 3rem 1rem;
+      background-color: var(--cream);
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .contact-section p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-section a {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 600;
+      transition: opacity 0.3s;
+    }
+
+    .contact-section a:hover {
+      opacity: 0.8;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: var(--gold);
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+      color: var(--text-dark);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav ul {
+        flex-direction: column;
+        margin-top: 1rem;
+      }
+      .hero h2 {
+        font-size: 2rem;
+      }
+      .gallery-container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER / NAVBAR -->
+  <header>
+    <div class="logo">
+      <h1>Gwehbanget</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#galeri">Galeri</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION (Home) -->
+  <section class="hero" id="home">
+    <img 
+      src="WhatsApp Image 2025-04-06 at 7.15.40 AM.jpeg" 
+      alt="Foto Profil" 
+      class="hero-img"
+    >
+    <h2>Selamat Datang</h2>
+    <p>Saya Muhammad Rizqi Jamhari. Saya adalah seorang mahasiswa Pendidikan Multimedia UPI dan seorang Photographer Profesional.</p>
+  </section>
+
+
+<!-- TENTANG SECTION -->
+<section class="about-section" id="tentang">
+  <h2>Tentang Saya</h2>
+  <div class="about-container">
+    <div class="about-image">
+      <img src="WhatsApp Image 2025-04-06 at 7.15.47 AM (1).jpeg" alt="Foto Saya">
+    </div>
+    <div class="about-text">
+      <p>Saya memiliki minat besar dalam dunia fotografi dan multimedia. Karya-karya saya mengangkat tema kehidupan sehari-hari, lanskap, dan potret. Dengan pengalaman dan dedikasi tinggi, saya selalu berusaha menghasilkan karya terbaik yang menceritakan keindahan dan realitas kehidupan.</p>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- GALERI SECTION -->
+  <section class="gallery-section" id="galeri">
+    <h2 class="gallery-title">Galeri Saya</h2>
+    <div class="gallery-container">
+      <img src="0f129fb5f9270722f42878dc59b06686.jpg" alt="Gambar 1">
+      <img src="94b420d6ca60cf5ea8cd5f312752759b.jpg" alt="Gambar 2">
+      <img src="1df9dadcb030bd9306538aa36a2c23a4.jpg" alt="Gambar 3">
+      <img src="e49e26f34e723eb3024978d9b90e70ed.jpg" alt="Gambar 4">
+      <img src="7c5d8e65b1c809e198ed58fbd983b54e.jpg" alt="Gambar 5">
+      <img src="6650bfdd146af8928c1b7bd451862448.jpg" alt="Gambar 6">
+      <img src="f67eec5e89b6a7aac8238d7c20ad540f.jpg" alt="Gambar 7">
+      <img src="4cc816bb9501d9e62510e211048d88f2.jpg" alt="Gambar 8">
+    </div>
+    <a href="#" class="view-more-btn">Lihat Lebih Banyak</a>
+  </section>
+
+  <!-- KONTAK SECTION -->
+  <section class="contact-section" id="kontak">
+    <h2>Kontak</h2>
+    <p>Follow kami di Instagram untuk update terbaru.</p>
+    <a href="https://www.instagram.com" target="_blank">@Immy2209</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Copyright ©2025 All rights reserved</p>
+  </footer>
+
+</body>
+</html>
